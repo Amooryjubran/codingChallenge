@@ -4,6 +4,8 @@ import { routerMiddleware } from "connected-react-router";
 import { composeWithDevTools } from "redux-devtools-extension/developmentOnly";
 import thunkMiddleware from "redux-thunk";
 
+import reducers from "./reducers";
+
 export const history = createBrowserHistory({
   basename: "/",
 });

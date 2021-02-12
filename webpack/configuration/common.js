@@ -8,20 +8,15 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: {
-            loader: "babel-loader",
-            options: {
-              loader: "babel-loader",
-              options: {
-                presets: ["@babel/preset-env", "@babel/preset-react"],
-              },
-            },
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"],
           },
         },
       },
     ],
   },
-  plugin: [
+  plugins: [
     new HtmlWebpackPlugin({
       title: "Coding Challenge",
       template: "./webpack/template/index.ejs",
